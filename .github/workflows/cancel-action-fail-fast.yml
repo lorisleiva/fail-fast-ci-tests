@@ -7,19 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: sleep 5 && exit 1
-      - uses: andymckay/cancel-action@0.4
+      - uses: action-pack/cancel@v1
         if: failure()
   b:
     runs-on: ubuntu-latest
     steps:
       - run: sleep 30
-      - uses: andymckay/cancel-action@0.4
+      - uses: action-pack/cancel@v1
         if: failure()
   c:
     runs-on: ubuntu-latest
     steps:
       - run: sleep 60
-      - uses: andymckay/cancel-action@0.4
+      - uses: action-pack/cancel@v1
         if: failure()
   d:
     runs-on: ubuntu-latest
