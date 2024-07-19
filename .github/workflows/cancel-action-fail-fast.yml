@@ -26,6 +26,6 @@ jobs:
         if: failure()
   d:
     runs-on: ubuntu-latest
-    needs: [a, b, c]
+    needs: a
     steps:
       - run: exit 0
