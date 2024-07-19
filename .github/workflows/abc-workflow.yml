@@ -3,7 +3,6 @@ name: ABC workflow
 on:
   workflow_call:
 
-
 jobs:
   a:
     runs-on: ubuntu-latest
