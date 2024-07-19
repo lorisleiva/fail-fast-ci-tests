@@ -7,15 +7,15 @@ jobs:
   a:
     runs-on: ubuntu-latest
     steps:
-      - run: sleep 1 && exit 1
+      - run: sleep 5 && exit 1
   b:
     runs-on: ubuntu-latest
     steps:
-      - run: sleep 6
+      - run: sleep 30
   c:
     runs-on: ubuntu-latest
     steps:
-      - run: sleep 12
+      - run: sleep 60
   d:
     runs-on: ubuntu-latest
     needs: [a, b, c]
