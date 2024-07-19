@@ -1,0 +1,14 @@
+name: Reusable workflow fail-fast
+
+on: [push, pull_request]
+
+
+jobs:
+  reusable:
+    runs-on: ubuntu-latest
+    uses: lorisleiva/ci-tests/.github/workflows/abc-workflow.yml@main
+  d:
+    runs-on: ubuntu-latest
+    needs: reusable
+    steps:
+      - run: exit 0

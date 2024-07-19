@@ -1,6 +1,7 @@
-name: Dependency fail-fast
+name: ABC workflow
 
-on: [push, pull_request]
+on:
+  workflow_call:
 
 
 jobs:
@@ -16,8 +17,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: sleep 12
-  d:
-    runs-on: ubuntu-latest
-    needs: [a, b, c]
-    steps:
-      - run: exit 0
