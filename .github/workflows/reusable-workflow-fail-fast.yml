@@ -5,7 +5,6 @@ on: [push, pull_request]
 
 jobs:
   reusable:
-    runs-on: ubuntu-latest
     uses: lorisleiva/ci-tests/.github/workflows/abc-workflow.yml@main
   d:
     runs-on: ubuntu-latest
