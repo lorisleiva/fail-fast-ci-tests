@@ -20,3 +20,5 @@ jobs:
   d:
     runs-on: ubuntu-latest
     needs: [a, b, c]
+    steps:
+      - run: exit 0
