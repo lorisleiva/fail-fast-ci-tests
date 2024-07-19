@@ -1,0 +1,19 @@
+name: No fail-fast
+
+on: [push, pull_request]
+
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 1
+      - run: exit 1
+  b:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 2
+  c:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 3
